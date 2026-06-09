@@ -42,6 +42,46 @@
                     </ul>
                 </li>
 
+                <li class="slide has-sub {{ request()->routeIs('branches.*') ? 'open' : '' }}">
+                    <a href="javascript:void(0);"
+                        class="side-menu__item {{ request()->routeIs('branches.*') ? 'active' : '' }}">
+                        <i class="bi bi-diagram-3 side-menu__icon"></i>
+                        <span class="side-menu__label">الفروع</span>
+                        <i class="fe fe-chevron-right side-menu__angle"></i>
+                    </a>
+                    <ul class="slide-menu child1">
+                        <li class="slide">
+                            <a href="{{ route('branches.index') }}"
+                                class="side-menu__item {{ request()->routeIs('branches.index') ? 'active' : '' }}">الرئيسية</a>
+                        </li>
+                        <li class="slide">
+                            <a href="{{ route('branches.create') }}"
+                                class="side-menu__item {{ request()->routeIs('branches.create') ? 'active' : '' }}">اضافة
+                                فرع</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="slide has-sub {{ request()->routeIs('sections.*') ? 'open' : '' }}">
+                    <a href="javascript:void(0);"
+                        class="side-menu__item {{ request()->routeIs('sections.*') ? 'active' : '' }}">
+                        <i class="bi bi-collection side-menu__icon"></i>
+                        <span class="side-menu__label">الأقسام</span>
+                        <i class="fe fe-chevron-right side-menu__angle"></i>
+                    </a>
+                    <ul class="slide-menu child1">
+                        <li class="slide">
+                            <a href="{{ route('sections.index') }}"
+                                class="side-menu__item {{ request()->routeIs('sections.index') ? 'active' : '' }}">الرئيسية</a>
+                        </li>
+                        <li class="slide">
+                            <a href="{{ route('sections.create') }}"
+                                class="side-menu__item {{ request()->routeIs('sections.create') ? 'active' : '' }}">اضافة
+                                قسم</a>
+                        </li>
+                    </ul>
+                </li>
+
             </ul>
             <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191"
                     width="24" height="24" viewBox="0 0 24 24">

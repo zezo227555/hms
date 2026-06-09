@@ -25,12 +25,8 @@
                             <td>
                                 <a href="{{ route('users.show', $user->id) }}" class="btn btn-sm btn-info-transparent btn-b">عرض</a>
                                 <a href="{{ route('users.edit', $user->id) }}" class="btn btn-sm btn-warning-transparent">تعديل</a>
-                                <form action="{{ route('users.destroy', $user->id) }}" method="POST"
-                                    class="d-inline-block delete-form">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" role="submit" class="btn btn-sm btn-danger-transparent">حذف</button>
-                                </form>
+                                <x-form-delete :route="'users.destroy'" :id="$user->id" :title="'حذف المستخدم'"
+                                            :label="'حذف'" />
                             </td>
                         </tr>
                     @endforeach
